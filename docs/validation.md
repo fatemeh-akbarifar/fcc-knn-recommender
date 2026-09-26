@@ -1,0 +1,25 @@
+# Reproducibility report
+
+Verified on 26 September 2026 with Python 3.9.13 on macOS ARM64 (CPU).
+
+## Dataset run
+
+```bash
+python book_recommender.py
+```
+
+The validation run used the same public data cached under `/private/tmp/fcc-data`; output paths were supplied explicitly where needed. Defaults use repository-local `data/` and `artifacts/`.
+
+Real dataset: 673 eligible books and 888 users. Five model-derived recommendations were returned, with no answer substitution.
+
+[Machine-readable results](results.json). These are newly measured results, not historical notebook output.
+
+## Behavioral checks
+
+`python -m pytest -q` passed 4 tests. Tests cover archive traversal rejection and cosine distances, self-exclusion, unknown titles, and filtering edge cases.
+
+## Environment
+
+Core versions: NumPy 1.23.5, pandas 2.2.3, scikit-learn 1.6.1 and SciPy 1.13.1. Dependency pins are in `requirements.txt`. No GPU was used. Results can vary across platforms; the neural-network seed is 42.
+
+The GitHub Actions workflow is configured separately; local success does not itself establish a successful hosted workflow run.
