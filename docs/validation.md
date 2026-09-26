@@ -16,7 +16,7 @@ Real dataset: 673 eligible books and 888 users. Five model-derived recommendatio
 
 ## Behavioral checks
 
-`python -m pytest -q` passed 4 tests. Tests cover archive traversal rejection and cosine distances, self-exclusion, unknown titles, and filtering edge cases.
+`python -m pytest -q` passed 5 tests. Tests cover archive traversal rejection and cosine distances, self-exclusion, unknown titles, and filtering edge cases.
 
 ## Environment
 
@@ -31,3 +31,7 @@ The pinned requirements installed successfully into a new virtual environment wi
 ## Hosted CI
 
 [Python 3.11 GitHub Actions run](https://github.com/fatemeh-akbarifar/fcc-knn-recommender/actions/runs/36242602253) completed successfully for the published implementation.
+
+## First-run downloads
+
+The CDN rejected Python's default HTTP user agent (403). The downloader now supplies an explicit client header; a fresh real HTTPS download matched the recorded checksum. A focused test verifies that header, complete file writing, and cache reuse.
