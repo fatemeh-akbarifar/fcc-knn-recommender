@@ -4,6 +4,12 @@
 
 An item-based collaborative-filtering project that recommends books from reader-rating patterns. It demonstrates data filtering, a sparse book–user representation, cosine similarity, and reproducible nearest-neighbor retrieval.
 
+## Original work
+
+The original notebook preserves the book/user filtering, rating matrix, and cosine-neighbor implementation. The maintained edition returns computed recommendations throughout; the evidence notes explain how its validation differs from the original saved example.
+
+[Original notebook and evidence](docs/original-work.md). The runnable edition below includes maintenance fixes; new validation numbers are kept separate from historical achievements.
+
 ## Run locally
 
 ```bash
@@ -44,9 +50,9 @@ No query has a hard-coded answer. A distance is a similarity measure, not a prob
 
 `artifacts/recommendations.json` contains the query, recommendations, distances, and matrix dimensions.
 
-## Verified results
+## Maintenance validation (September 2026)
 
-Verified on the real Book-Crossing data: **673 books**, **888 users**, and five model-derived recommendations per default query.
+The maintained implementation was checked on the real Book-Crossing data: **673 books**, **888 users**, and five model-derived recommendations per default query.
 
 See [the reproducibility report](docs/validation.md) for measured results, commands, environment, and the limits of validation.
 
