@@ -23,6 +23,15 @@ Notebook: [book_recommendation.ipynb](book_recommendation.ipynb). [Open in Colab
 
 ## Method
 
+```mermaid
+flowchart LR
+    A[Book and rating CSVs] --> B[Filter active users and rated books]
+    B --> C[Book-user matrix]
+    C --> D[CSR sparse representation]
+    D --> E[Cosine-distance nearest neighbors]
+    E --> F[Five similar books]
+```
+
 1. Load the freeCodeCamp Book-Crossing CSV files.
 2. Retain users with at least 200 ratings and ISBNs with at least 100 ratings, counting both thresholds on the original ratings table.
 3. Join titles, average duplicate title/user entries, fill missing ratings with zero, and convert to CSR format. Remove all-zero book vectors.
