@@ -23,3 +23,11 @@ Real dataset: 673 eligible books and 888 users. Five model-derived recommendatio
 Core versions: NumPy 1.23.5, pandas 2.2.3, scikit-learn 1.6.1 and SciPy 1.13.1. Dependency pins are in `requirements.txt`. No GPU was used. Results can vary across platforms; the neural-network seed is 42.
 
 The GitHub Actions workflow is configured separately; local success does not itself establish a successful hosted workflow run.
+
+## Clean-environment verification
+
+The pinned requirements installed successfully into a new virtual environment with no inherited site packages. `pip check` found no broken requirements, and this project's test suite passed in that environment. Python 3.11 hosted CI is tracked separately.
+
+## Hosted CI
+
+[Python 3.11 GitHub Actions run](https://github.com/fatemeh-akbarifar/fcc-knn-recommender/actions/runs/36242602253) completed successfully for the published implementation.

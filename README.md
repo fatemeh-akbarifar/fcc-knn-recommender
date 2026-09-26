@@ -1,5 +1,7 @@
 # Book recommendations with k-nearest neighbors
 
+[![Tests](https://github.com/fatemeh-akbarifar/fcc-knn-recommender/actions/workflows/tests.yml/badge.svg)](https://github.com/fatemeh-akbarifar/fcc-knn-recommender/actions/workflows/tests.yml)
+
 An item-based collaborative-filtering project that recommends books from reader-rating patterns. It demonstrates data filtering, a sparse book–user representation, cosine similarity, and reproducible nearest-neighbor retrieval.
 
 ## Run locally
